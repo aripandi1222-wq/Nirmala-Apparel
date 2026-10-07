@@ -1,0 +1,6 @@
+{
+  "name": "Nirmala Apparel & Batik",
+  "description": "Website toko baju online UMKM modern & responsif untuk GitHub Pages. Katalog produk lokal, filter instan, keranjang belanja, dan pemesanan WhatsApp otomatis.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
