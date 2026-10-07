@@ -1,0 +1,54 @@
+[
+  {
+    "id": "prod-01",
+    "nama": "Kemeja Linen Oversized Earth Sage",
+    "harga": 165000,
+    "kategori": "Atasan",
+    "ukuran": ["All Size", "M", "L", "XL"],
+    "warna": ["Sage Green", "Warm Ivory", "Olive Earth"],
+    "deskripsi": "Kemeja santai loose-fit berbahan 100% linen alami adem.",
+    "berat": 260,
+    "foto": ["/images/kemeja_linen_casual_1791376156260.jpg"],
+    "stok": 18,
+    "badge": "Terlaris"
+  },
+  {
+    "id": "prod-02",
+    "nama": "Blouse Batik Modern Floral Terracotta",
+    "harga": 185000,
+    "kategori": "Batik",
+    "ukuran": ["S/M", "L/XL", "XXL"],
+    "warna": ["Terracotta Floral", "Batu Sage"],
+    "deskripsi": "Blouse batik cap kontemporer dengan motif floral modern halus.",
+    "berat": 220,
+    "foto": ["/images/blouse_batik_modern_1791376187400.jpg"],
+    "stok": 8,
+    "badge": "Stok Terbatas"
+  },
+  {
+    "id": "prod-03",
+    "nama": "Maxi Dress Katun Ruffle Sahara",
+    "harga": 215000,
+    "kategori": "Dress",
+    "ukuran": ["All Size", "Upsize"],
+    "warna": ["Bata Terracotta", "Almond Cream"],
+    "deskripsi": "Dress panjang katun twill rayon flowy dan nyaman dipakai seharian.",
+    "berat": 340,
+    "foto": ["/images/maxi_dress_katun_1791376203131.jpg"],
+    "stok": 12,
+    "badge": "Baru"
+  },
+  {
+    "id": "prod-04",
+    "nama": "Celana Kulot Linen Ankle Pleated",
+    "harga": 155000,
+    "kategori": "Bawahan",
+    "ukuran": ["Standar", "Jumbo"],
+    "warna": ["Warm Beige", "Cokelat Susu", "Hitam"],
+    "deskripsi": "Celana kulot semi-formal dengan karet pinggang belakang elastis.",
+    "berat": 290,
+    "foto": ["/images/celana_kulot_linen_1791376221324.jpg"],
+    "stok": 24,
+    "badge": "Favorit"
+  }
+]

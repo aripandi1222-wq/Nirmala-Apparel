@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nirmala Apparel & Batik — Toko Baju Online UMKM</title>
+  <meta name="description" content="Toko baju online UMKM modern tanpa backend. Pesan langsung via WhatsApp.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Header Nav -->
+  <header>
+    <div class="container nav-container">
+      <a href="index.html" class="brand">Nirmala Apparel</a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">Beranda</a></li>
+          <li><a href="katalog.html">Katalog</a></li>
+          <li><a href="tentang.html">Tentang</a></li>
+          <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+      </nav>
+      <a href="keranjang.html" class="cart-icon-btn">
+        Keranjang <span class="cart-badge">0</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main class="container" style="padding-top: 40px; padding-bottom: 60px;">
+    <div style="background: #f5f3ef; border: 1px solid #e7e5e4; border-radius: 16px; padding: 40px 24px; text-align: center; margin-bottom: 40px;">
+      <h1 style="font-family: 'Playfair Display', serif; font-size: 32px; margin-bottom: 12px; color: #1c1917;">
+        Sentuhan Linen Alami & Batik Modern Indonesia
+      </h1>
+      <p style="color: #78716c; max-width: 600px; margin: 0 auto 24px; font-size: 14px;">
+        Busana santai dengan bahan katun & linen berkualitas dari pengrajin lokal Yogyakarta. Pesan langsung dengan mudah via WhatsApp.
+      </p>
+      <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+        <a href="katalog.html" class="btn btn-primary">Lihat Katalog Baju &rarr;</a>
+        <a href="https://wa.me/62882021480385?text=Halo%20Admin%2C%20mau%20tanya%20koleksi%20baju" target="_blank" class="btn btn-wa">Chat WhatsApp</a>
+      </div>
+    </div>
+
+    <!-- Featured Products Section -->
+    <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 16px;">
+      <div>
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 24px; color: #1c1917;">Koleksi Unggulan</h2>
+        <p style="color: #78716c; font-size: 13px;">Model terfavorit yang siap dikirim langsung</p>
+      </div>
+      <a href="katalog.html" style="font-size: 13px; font-weight: 600; color: #1c1917; text-decoration: none;">Semua Produk &rarr;</a>
+    </div>
+
+    <div id="featured-grid" class="product-grid">
+      <!-- Injected by JavaScript -->
+    </div>
+  </main>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/62882021480385?text=Halo%20Admin%20Nirmala%2C%20mau%20tanya%20produk" target="_blank" class="floating-wa" title="Chat WhatsApp">
+    💬
+  </a>
+
+  <!-- Footer -->
+  <footer style="background: #1c1917; color: #a8a29e; padding: 40px 0; font-size: 13px; margin-top: 40px;">
+    <div class="container" style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px;">
+      <div>
+        <h3 style="color: #fff; font-family: 'Playfair Display', serif; font-size: 18px; margin-bottom: 8px;">Nirmala Apparel & Batik</h3>
+        <p>Jl. Tirtodipuran No. 42, Mantrijeron, Kota Yogyakarta</p>
+        <p>WhatsApp: +62 882-0214-80385</p>
+      </div>
+      <div>
+        <p>&copy; Nirmala Apparel. Toko Baju Online UMKM Berbasis WhatsApp.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+  <script>
+    fetch('products.json')
+      .then(res => res.json())
+      .then(products => {
+        const grid = document.getElementById('featured-grid');
+        grid.innerHTML = products.slice(0, 4).map(p => `
+          <div class="product-card">
+            <img src="${p.foto[0]}" alt="${p.nama}" class="product-thumb">
+            <div class="product-info">
+              <div>
+                <p style="font-size: 11px; text-transform: uppercase; color: #78716c; font-weight: 600;">${p.kategori}</p>
+                <h3 class="product-name">${p.nama}</h3>
+              </div>
+              <div style="margin-top: 8px; display: flex; justify-content: space-between; align-items: center;">
+                <span class="product-price">${formatRupiah(p.harga)}</span>
+                <a href="katalog.html" style="font-size: 12px; color: #92400e; font-weight: 600; text-decoration: none;">Pilih Varian &rarr;</a>
+              </div>
+            </div>
+          </div>
+        `).join('');
+      })
+      .catch(err => console.error(err));
+  </script>
+</body>
+</html>
